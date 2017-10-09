@@ -1,28 +1,13 @@
 <template>
-    <section class="login">
-        <h3 class="text-xs-left">Login</h3>
-         <form>
-            <v-text-field
-                label="Name"
-                v-model="name"
-                :error-messages="nameErrors"
-                :counter="10"
-                @input="$v.name.$touch()"
-                @blur="$v.name.$touch()"
-                required
-                ></v-text-field>
-                <v-text-field
-                label="E-mail"
-                v-model="email"
-                :error-messages="emailErrors"
-                @input="$v.email.$touch()"
-                @blur="$v.email.$touch()"
-                required
-            ></v-text-field>
-            <v-btn @click="submit">submit</v-btn>
-            <v-btn @click="clear">clear</v-btn>
-        </form>
-    </section>
+  <section class="login">
+    <h3 class="text-xs-left">Login</h3>
+    <form>
+      <v-text-field label="Name" v-model="name" :error-messages="nameErrors" :counter="10" @input="$v.name.$touch()" @blur="$v.name.$touch()" required></v-text-field>
+      <v-text-field label="E-mail" v-model="email" :error-messages="emailErrors" @input="$v.email.$touch()" @blur="$v.email.$touch()" required></v-text-field>
+      <v-btn @click="submit">submit</v-btn>
+      <v-btn @click="clear">clear</v-btn>
+    </form>
+  </section>
 </template>
 
 <script>
